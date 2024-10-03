@@ -1,0 +1,189 @@
+:root {
+    --main-color: #6C5B7B;
+    --secondary-color: #ffffff;
+    --accent-color: #F8B195;
+    --background-color: #F2E9E4;
+    --default-font-color: #DDDDDD;
+    --highlight-color: #D8A7B1;
+    --font-family: sans-serif;
+    --padding: 20px;
+    --font-size: 18px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease-in-out;
+  }
+
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    background: url('wave to earth.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 0;
+  }
+  
+  header, section, footer {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #about-seasons {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: flex-start;
+  }
+  
+  .about-wave, .seasons-media {
+    width: 48%; 
+  }
+  
+  .seasons-media audio, .seasons-media iframe {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+
+  header {
+    background-color: transparent; 
+    color: white;
+    padding: var(--padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: var(--transition);
+  }
+  
+  nav ul li a:hover {
+    color: var(--accent-color);
+  }
+  
+  h1, h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--highlight-color);
+  }
+  
+  p {
+    font-size: 1rem;
+    color: var(--default-font-color); 
+  }
+
+  .album-card {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: var(--padding);
+    margin: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+  }
+  
+  .album-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .album-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .album-card p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+  }
+  
+  article {
+    margin-bottom: 30px;
+  }
+  
+  article h3 {
+    font-size: 1.5rem;
+    color: var(--highlight-color);
+    text-align: center;
+  }
+  
+  article p {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--default-font-color);
+    margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+
+  footer {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+    margin-top: 50px;
+  }
+  .album-card:hover,
+  nav ul li a:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    nav ul li {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    .album-card {
+      width: 100%;
+    }
+  
+    #about-seasons {
+      flex-direction: column;
+    }
+  
+    .about-wave, .seasons-media {
+      width: 100%;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
